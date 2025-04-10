@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #1d976c, #93f9b9);
+            text-align: center;
+            margin: 50px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            color: #1d976c;
+        }
+        a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px;
+            background: #1d976c;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        a:hover {
+            background: #157a55;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome, <%= user.username %> 👋</h2>
+        <a href="/logout">Logout</a>
+    </div>
+</body>
+</html>
