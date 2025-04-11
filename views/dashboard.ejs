@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<% if (!user || !user.username) { %>
-    <p>⚠️ Warning: User data is missing!</p>
-<% } %>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -41,9 +37,11 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <h2>Welcome, <%= user.username || "Guest" %> 👋</h2>
-        <a href="/logout">Logout</a>
-    </div>
+    <% if (user && user.username) { %>
+        <div class="container">
+            <h2>Welcome, <%= user.username %> 👋</h2>
+            <a href="/logout">Logout</a>
+        </div>
+    <% } %>
 </body>
 </html>
