@@ -42,6 +42,8 @@
             <h2>Welcome, <%= user.username %> 👋</h2>
             <a href="/logout">Logout</a>
         </div>
+    <% } else { %>
+        <p style="color: red;">User not found! Please log in again.</p>
     <% } %>
 </body>
 </html>
