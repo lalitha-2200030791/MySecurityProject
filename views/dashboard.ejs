@@ -37,13 +37,16 @@
     </style>
 </head>
 <body>
-    <% if (user && user.username) { %>
-        <div class="container">
+    <div class="container">
+        <% if (user && user.username) { %>
             <h2>Welcome, <%= user.username %> 👋</h2>
-            <a href="/logout">Logout</a>
-        </div>
-    <% } else { %>
-        <p style="color: red;">User not found! Please log in again.</p>
-    <% } %>
+        <% } %>
+        <a href="/logout">Logout</a>
+    </div>
+
+    <script>
+        // Remove any empty div elements
+        document.querySelectorAll("div:empty").forEach(div => div.remove());
+    </script>
 </body>
 </html>
