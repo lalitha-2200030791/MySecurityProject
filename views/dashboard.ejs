@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<% if (!user || !user.username) { %>
+    <p>⚠️ Warning: User data is missing!</p>
+<% } %>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
